@@ -1,0 +1,75 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 720 >>
+stream
+BT
+/F1 22 Tf
+50 720 Td
+(Sai Myint Lu) Tj
+/F2 12 Tf
+0 -24 Td
+(Software Engineer | Computer Science Student | Yangon, Myanmar) Tj
+0 -18 Td
+(Email: saimyintlu137@gmail.com | Phone: +959 772 460 582) Tj
+0 -16 Td
+(GitHub: github.com/Cosine2397 | LinkedIn: linkedin.com/in/cosine2397) Tj
+/F1 14 Tf
+0 -36 Td
+(EDUCATION) Tj
+/F2 11 Tf
+0 -20 Td
+(University of Information Technology (UIT) - B.C.Sc. Software Engineering) Tj
+0 -16 Td
+(Expected Graduation: 2026 | IP Certified) Tj
+/F1 14 Tf
+0 -32 Td
+(TECHNICAL SKILLS) Tj
+/F2 11 Tf
+0 -20 Td
+(Languages & Tools: C++, JavaScript, Node.js, HTML5, CSS3, MySQL, Git, Figma) Tj
+0 -16 Td
+(Currently Learning: React, REST APIs, AI Integration, System Design) Tj
+/F1 14 Tf
+0 -32 Td
+(PROJECTS) Tj
+/F2 11 Tf
+0 -20 Td
+(1. Cafe Website - Reward Gaming System (HTML, CSS, JavaScript)) Tj
+0 -16 Td
+(   Interactive mini-games (memory card, bean catch) with point-based rewards.) Tj
+0 -20 Td
+(2. Caesar Cipher Encryption Program (C++)) Tj
+0 -16 Td
+(   CLI encryption/decryption tool with ASCII validation & interactive menu.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000244 00000 n 
+0000001017 00000 n 
+0000001090 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+1158
+%%EOF
