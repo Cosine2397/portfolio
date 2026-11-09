@@ -1,6 +1,13 @@
 # Sai Myint Lu Portfolio
 A modern, minimalist personal developer portfolio showcasing software engineering projects, technical capabilities, and academic background with editorial typography and interactive micro-animations.
 
+## Live Hosted Website
+
+The portfolio is deployed and hosted live on GitHub Pages:
+cosine2397.github.io/portfolio
+
+Visit the hosted link above to experience the live responsive portfolio, test the interactive Caesar Cipher sandbox, explore projects, and toggle dark/light themes.
+
 ## Features
 - Editorial Typography: Paired with Fraunces, Inter, and IBM Plex Mono.
 - Custom Dual Cursor: Custom dot and trailing elastic ring with context-aware sizing.
