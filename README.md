@@ -1,14 +1,14 @@
 # Sai Myint Lu — Portfolio
 
-> Personal developer portfolio showcasing software engineering projects, interactive tools, and clean UI/UX design.
+> Personal portfolio showcasing software engineering projects, interactive tools, and clean UI/UX design.
 
-## 🌐 Live Demo
+##  Live Demo
 
-👉 **[cosine2397.github.io/portfolio](//cosine2397.github.io/portfolio/)**
+ **[cosine2397.github.io/portfolio](//cosine2397.github.io/portfolio/)**
 
 ---
 
-## ✨ Highlights
+##  Highlights
 
 - **Dual Theme Engine:** Instant toggle between Obsidian Dark and Editorial Cream.
 - **Interactive Caesar Cipher Sandbox:** Live in-browser C++ cipher encryption & decryption playground.
@@ -18,7 +18,7 @@
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Frontend:** Semantic HTML5, Modern CSS3, Vanilla JavaScript (ES6+)
 - **Typography:** Fraunces, Inter, IBM Plex Mono via Google Fonts
@@ -26,14 +26,15 @@
 
 ---
 
-## 👤 Author
+##  Author
 
 **Sai Myint Lu**
 - **Education:** University of Information Technology (UIT), Yangon
 - **GitHub:** @Cosine2397
+- **Linkedin:** https://www.linkedin.com/in/cosine2397/
 
 ---
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License.
