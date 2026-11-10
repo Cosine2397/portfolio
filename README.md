@@ -8,13 +8,13 @@
 
 ---
 
-##  Highlights
+## Highlights
 
-- **Dual Theme Engine:** Instant toggle between Obsidian Dark and Editorial Cream.
-- **Interactive Caesar Cipher Sandbox:** Live in-browser C++ cipher encryption & decryption playground.
-- **Custom Dual Cursor & Magnetic Physics:** Tactile cursor with magnetic button snapping.
-- **Ambient Constellation Canvas:** Interactive particle field in the background.
-- **Live Yangon Status HUD:** Real-time clock (UTC+6:30) and availability status indicator.
+- **Editorial Paper Design:** Warm cream paper aesthetic paired with Fraunces, Inter, and IBM Plex Mono typography.
+- **Custom Dual Cursor:** Context-aware elastic cursor ring and magnetic button snapping.
+- **Floating Project Previews:** Interactive contextual preview cards on project hover.
+- **Animated Metrics & Counters:** Smooth numeric easing on statistics and animated language bars on scroll.
+- **Responsive & Accessible:** Fluid mobile drawer and full support for reduced motion preferences.
 
 ---
 

@@ -11,8 +11,6 @@
 </head>
 <body>
 
-<div id="scrollProgress"></div>
-<canvas id="ambientCanvas"></canvas>
 <div id="curtain"><span>Compiling portfolio…</span></div>
 <div class="grain"></div>
 <div id="cursorDot"></div>
@@ -20,34 +18,20 @@
 
 <header class="nav" id="siteNav">
   <div class="wrap nav-inner">
-    <div class="nav-brand">
-      <a href="#top" class="nav-mark magnetic">Sai Myint Lu</a>
-      <div class="nav-status">
-        <span class="pulse-dot"></span>
-        <span>Available for Hire</span>
-        <span style="opacity:0.4;">•</span>
-        <span id="navTime">Yangon: --:--:--</span>
-      </div>
-    </div>
-    <div class="nav-right">
-      <nav>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#about">About</a></li>
-          <li><a href="#work">Projects</a></li>
-          <li><a href="#cipher">Playground</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#resume">Resume</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <button class="icon-btn magnetic" id="themeToggle" aria-label="Toggle dark/light theme" title="Toggle Theme (Key: T)">
-        <span id="themeIcon">☀️</span>
-      </button>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-        <span></span><span></span>
-      </button>
-    </div>
+    <a href="#top" class="nav-mark magnetic">Sai Myint Lu</a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span>
+    </button>
   </div>
 </header>
 
@@ -61,7 +45,7 @@
       <span class="line"><span>Clean code,</span></span>
       <span class="line"><span>clear <em>interfaces.</em></span></span>
     </h1>
-    <p class="hero-sub">I'm Sai — a Computer Science student at the University of Information Technology (UIT), building web apps and tools with practical engineering and clean UI/UX underneath. Currently deepening my React, REST API, and systems design skills.</p>
+    <p class="hero-sub">I'm Sai Myint Lu — a Computer Science student at the University of Information Technology (UIT), building web apps and tools with practical engineering and clean UI/UX underneath. Currently deepening my React, REST API, and systems design skills.</p>
     <div class="hero-meta">
       <div><strong>01</strong>Frontend — HTML / CSS / JS</div>
       <div><strong>02</strong>Backend — Node.js / MySQL</div>
@@ -84,7 +68,7 @@
       </div>
       <div class="about-text reveal d1">
         <p class="lead">"I'm most interested in software that's simple to use and even simpler to maintain."</p>
-        <p>I'm a second-year Computer Science student at the University of Information Technology (UIT), Myanmar, majoring in Software Engineering. I build modern web applications with a strong focus on clean UI/UX, and I'm continuously picking up new technologies through side projects.</p>
+        <p>I'm a third-year Computer Science student at the University of Information Technology (UIT), Myanmar, majoring in Software Engineering. I build modern web applications with a strong focus on clean UI/UX, and I'm continuously picking up new technologies through side projects.</p>
         <p>Outside of coursework, I've built a reward-based café website with interactive mini-games and a command-line encryption tool in C++. Right now I'm deepening my skills in React, REST APIs, and system design.</p>
         <div class="about-stats">
           <div><div class="num" data-count="2">0</div><div class="lbl">Projects shipped</div></div>
@@ -111,51 +95,8 @@
         <span class="title">Caesar Cipher Encryption Program</span>
         <span class="tag">C++</span>
         <span class="year">Solo project</span>
-        <span class="work-detail">A command-line encryption and decryption tool with ASCII support, input validation, and an interactive menu-driven interface. (Try the live sandbox below!)</span>
-        <span class="fill" style="background:var(--ochre);"></span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Interactive Live Terminal Sandbox -->
-  <section id="cipher" class="wrap">
-    <div class="section-head reveal">
-      <h2>Interactive Sandbox</h2>
-      <span class="eyebrow">03 / Live Cipher Demo</span>
-    </div>
-    <div class="terminal-wrapper spotlight-card reveal">
-      <div class="terminal-bar">
-        <div class="terminal-dots">
-          <span class="terminal-dot dot-red"></span>
-          <span class="terminal-dot dot-yellow"></span>
-          <span class="terminal-dot dot-green"></span>
-        </div>
-        <span class="terminal-title">~/projects/caesar-cipher (Live C++ Logic)</span>
-        <span class="badge-tech">Try it</span>
-      </div>
-      <div class="terminal-body">
-        <div class="term-group">
-          <label for="cipherInput" class="term-label">Input Plaintext / Ciphertext</label>
-          <textarea id="cipherInput" class="term-input" placeholder="Type any message to test real-time encryption...">Clean code, clear interfaces.</textarea>
-          <div class="term-controls">
-            <label>
-              Shift Key: <strong id="shiftVal" style="color:var(--forest);">3</strong>
-              <input type="range" id="shiftSlider" class="term-slider" min="1" max="25" value="3">
-            </label>
-            <div style="display:flex; gap:8px;">
-              <button class="btn-sm" id="btnModeEncrypt" style="border-color:var(--forest); color:var(--forest);">Encrypt</button>
-              <button class="btn-sm" id="btnModeDecrypt">Decrypt</button>
-            </div>
-          </div>
-        </div>
-        <div class="term-group">
-          <label class="term-label">Transformed Output</label>
-          <div class="term-output-box" id="cipherOutput">Fohdq frgh, fohdu lqwhuidfhv.</div>
-          <div class="term-actions">
-            <button class="btn-sm" id="btnCopyCipher">Copy Output 📋</button>
-            <button class="btn-sm" id="btnResetCipher">Reset ↺</button>
-          </div>
-        </div>
+        <span class="work-detail">A command-line encryption and decryption tool with ASCII support, input validation, and an interactive menu-driven interface.</span>
+        <span class="fill" style="background:var(--ink);"></span>
       </div>
     </div>
   </section>
@@ -216,7 +157,7 @@
         <div class="eyebrow">University</div>
         <h3>University of Information Technology (UIT)</h3>
         <p>B.C.Sc. (Software Engineering)</p>
-        <p>2024 – 2026 · Second-year student</p>
+        <p>2024 – 2026 · Third-year student</p>
       </div>
       <div class="edu-card">
         <div class="eyebrow">Certification</div>
@@ -232,7 +173,7 @@
         <h2>Want the full story on paper?</h2>
         <p>A one-page rundown of my education, projects, and skills — ready to download.</p>
       </div>
-      <a href="assets/docs/Sai_Myint_Lu_Resume.pdf" download class="btn btn-light magnetic" id="resumeBtn">Download résumé (PDF) →</a>
+      <a href="assets/docs/Sai_Myint_Lu_resume .pdf" download class="btn btn-light magnetic" id="resumeBtn">Download résumé (PDF) →</a>
     </div>
   </section>
 
@@ -240,7 +181,7 @@
     <div class="reveal">
       <span class="eyebrow">05 / Get in touch</span>
       <h2 style="margin-top:20px;">Let's build<br>something together.</h2>
-      <a href="mailto:saimyintlu137@gmail.com" class="contact-email magnetic">saimyintlu137@gmail.com</a>
+      <a href="mailto:saimyintlu137@gmail.com" class="contact-email magnetic">sezzmyth98@gmail.com</a>
       <div class="contact-rows">
         <div class="contact-row"><span class="k">Phone</span><span class="v">+959 772 460 582</span></div>
         <div class="contact-row"><span class="k">Location</span><span class="v">Hlaing Township, Yangon</span></div>
@@ -261,7 +202,6 @@
 </main>
 
 <div class="preview-panel" id="previewPanel"><span id="previewLabel"></span></div>
-<div id="toast">Copied to clipboard!</div>
 
 <script src="js/main.js"></script>
 
