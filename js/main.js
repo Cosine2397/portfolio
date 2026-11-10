@@ -90,17 +90,75 @@ if (isFinePointer && !reduceMotion) {
 
   const panel = document.getElementById('previewPanel');
   const label = document.getElementById('previewLabel');
+  const previewImg = document.getElementById('previewImg');
+
+  // Preload project previews for instantaneous display
+  document.querySelectorAll('.work-row[data-preview]').forEach(row => {
+    const p = new Image();
+    p.src = row.dataset.preview;
+  });
+
+  if (previewImg) {
+    previewImg.addEventListener('error', () => {
+      previewImg.style.display = 'none';
+      if (panel) panel.classList.remove('has-image');
+    });
+    previewImg.addEventListener('load', () => {
+      if (previewImg.naturalWidth > 0) {
+        previewImg.style.display = 'block';
+        if (panel) panel.classList.add('has-image');
+      }
+    });
+  }
+
+  function setPanelPos(e) {
+    if (!panel) return;
+    const pad = 24;
+    const panelW = 320;
+    const panelH = 200;
+    let x = e.clientX + 28;
+    let y = e.clientY - 100;
+    if (x + panelW > window.innerWidth - pad) {
+      x = e.clientX - panelW - 28;
+    }
+    if (y < pad) y = pad;
+    if (y + panelH > window.innerHeight - pad) {
+      y = window.innerHeight - panelH - pad;
+    }
+    panel.style.left = x + 'px';
+    panel.style.top = y + 'px';
+  }
+
   document.querySelectorAll('.work-row').forEach(row => {
-    row.addEventListener('mouseenter', () => {
-      panel.style.background = row.dataset.color;
+    row.addEventListener('mouseenter', (e) => {
+      panel.style.background = row.dataset.color || 'var(--forest)';
       label.textContent = row.querySelector('.title').textContent;
+
+      const imgSrc = row.dataset.preview;
+      if (previewImg && imgSrc) {
+        if (previewImg.getAttribute('src') !== imgSrc) {
+          previewImg.src = imgSrc;
+        }
+        if (previewImg.complete && previewImg.naturalWidth > 0) {
+          previewImg.style.display = 'block';
+          panel.classList.add('has-image');
+        }
+      } else if (previewImg) {
+        previewImg.removeAttribute('src');
+        previewImg.style.display = 'none';
+        panel.classList.remove('has-image');
+      }
+
+      setPanelPos(e);
       panel.classList.add('show');
       ring.classList.add('tag'); ring.dataset.label='View';
     });
     row.addEventListener('mousemove', (e) => {
-      panel.style.left = (e.clientX + 28) + 'px';
-      panel.style.top = (e.clientY - 100) + 'px';
+      setPanelPos(e);
     });
-    row.addEventListener('mouseleave', () => { panel.classList.remove('show'); ring.classList.remove('tag'); });
+    row.addEventListener('mouseleave', () => {
+      panel.classList.remove('show');
+      ring.classList.remove('tag');
+    });
   });
 }
