@@ -4,11 +4,62 @@ const isFinePointer = window.matchMedia('(pointer:fine)').matches;
 setTimeout(() => { const c = document.getElementById('curtain'); if(c) c.style.display='none'; }, 1600);
 
 const nav = document.getElementById('siteNav');
-window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 12); });
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
-navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+function setMenuOpen(open) {
+  navLinks.classList.toggle('open', open);
+  navToggle.setAttribute('aria-expanded', String(open));
+}
+
+navToggle.addEventListener('click', () => setMenuOpen(!navLinks.classList.contains('open')));
+navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenuOpen(false)));
+nav.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && navLinks.classList.contains('open')) {
+    setMenuOpen(false);
+    navToggle.focus();
+  }
+});
+
+function getScrollPosition() {
+  const { scrollHeight, clientHeight, scrollTop } = document.scrollingElement;
+  return Math.max(0, Math.min(scrollTop, scrollHeight - clientHeight));
+}
+
+function setHeaderHidden(hidden) {
+  if (hidden === nav.inert) return;
+  nav.classList.toggle('nav-hidden', hidden);
+  nav.inert = hidden;
+  if (hidden) setMenuOpen(false);
+}
+
+const scrollThreshold = 8;
+let scrollAnchor = getScrollPosition();
+
+function updateHeaderVisibility() {
+  const position = getScrollPosition();
+  if (position <= 2) {
+    scrollAnchor = position;
+    setHeaderHidden(false);
+    return;
+  }
+
+  // Track the furthest point before a reversal so small scroll movements can add up.
+  scrollAnchor = nav.inert ? Math.max(scrollAnchor, position) : Math.min(scrollAnchor, position);
+  if (Math.abs(position - scrollAnchor) >= scrollThreshold) {
+    scrollAnchor = position;
+    setHeaderHidden(!nav.inert);
+  }
+}
+
+function resetScrollAnchor() {
+  scrollAnchor = getScrollPosition();
+  if (scrollAnchor <= 2) setHeaderHidden(false);
+}
+
+window.addEventListener('scroll', updateHeaderVisibility, { passive: true });
+window.addEventListener('resize', resetScrollAnchor);
+window.addEventListener('pageshow', resetScrollAnchor);
 
 const io = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });

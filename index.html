@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=2">
+<link rel="stylesheet" href="css/style.css?v=4">
 </head>
 <body>
 
@@ -20,6 +20,9 @@
   <div class="wrap nav-inner">
     <a href="#top" class="nav-mark magnetic">Sai Myint Lu</a>
     <nav>
+      <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false">
+        <span></span><span></span>
+      </button>
       <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
         <li><a href="#work">Projects</a></li>
@@ -29,9 +32,6 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-      <span></span><span></span>
-    </button>
   </div>
 </header>
 
@@ -65,7 +65,7 @@
         <p class="lead">"I'm most interested in software that's simple to use and even simpler to maintain."</p>
         <p>I'm a third-year Computer Science student at the University of Information Technology (UIT),Yangon, Myanmar, majoring in Software Engineering. I build modern web applications with a strong focus on clean UI/UX, and I'm continuously picking up new technologies through side projects.</p>
         <div class="about-stats">
-          <div><div class="num" data-count="2">0</div><div class="lbl">Projects shipped</div></div>
+          <div><div class="num" data-count="3">0</div><div class="lbl">Projects shipped</div></div>
           <div><div class="num" data-count="3">0</div><div class="lbl">Languages spoken</div></div>
           <div><div class="num" data-count="2026">0</div><div class="lbl">Expected graduation</div></div>
         </div>
@@ -92,6 +92,17 @@
         <span class="work-detail">An interactive, cross-platform command-line cipher suite featuring FormuLa-X, 2D Matrix Transposition, and the classic Caesar Cipher. The application includes ANSI color graphics, step-by-step visual demonstration mode, and direct text and Microsoft Word (.docx) file encryption.</span>
         <span class="fill" style="background:var(--ink);"></span>
       </a>
+      <div class="work-row" data-color="linear-gradient(155deg,#26334D,#101522)" data-preview="assets/images/earth-analogs.jpg">
+        <span class="idx">03</span>
+        <span class="title">Earth Analogs</span>
+        <span class="tag">Interactive 3D · GIS</span>
+        <span class="year work-links">
+          <a class="work-primary-link" href="https://github.com/Phyokyawkaung/Pipilapu_NASA" target="_blank" rel="noopener noreferrer" aria-label="Earth Analogs on GitHub"><span>GitHub</span></a>
+          <a class="work-demo-link" href="https://youtu.be/7a_dBD419L0" target="_blank" rel="noopener noreferrer" aria-label="Earth Analogs demo on YouTube">YouTube Demo</a>
+        </span>
+        <span class="work-detail">I led the group that built Earth Analogs, an interactive 3D solar system and mapping tool for exploring sites on Earth similar to locations on the Moon and Mars.</span>
+        <span class="fill" style="background:#101522;"></span>
+      </div>
     </div>
   </section>
 
@@ -200,7 +211,7 @@
   <span id="previewLabel"></span>
 </div>
 
-<script src="js/main.js?v=2"></script>
+<script src="js/main.js?v=4"></script>
 
 </body>
 </html>
